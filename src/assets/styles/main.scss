@@ -1,0 +1,275 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  #app {
+    min-height: 100vh;
+    position: relative;
+  }
+}
+
+h1 {
+  color: #333;
+}
+
+button {
+  background-color: #50b053;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: sans-serif;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: darken(#50b053, 10%);
+  }
+}
+.call, .pass {
+  display: flex;
+  align-items: center;
+}
+.appeals-list {
+  padding: 20px;
+  background: #eeeeee;
+
+  h1 {
+    margin-bottom: 3%;
+    font-weight: 200;
+    font-size: 25px;
+    padding-left: 5px;
+  }
+
+  input {
+    padding: 8px;
+    margin-bottom: 20px;
+    border: none;
+    padding-bottom: 17px;
+    font-size: 14px;
+    border-bottom: 1px solid #c1c1c1;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+    th, td {
+      padding: 16px;
+      text-align: left;
+      border-bottom: 1px solid #dddfe0;
+    }
+
+    th {
+      color: #50b053;
+    }
+
+    tbody tr:hover {
+      background-color: #f1f1f1;
+      cursor: pointer;
+    }
+
+    tbody tr td:first-child {
+      font-weight: bold;
+      color: #50b053;
+    }
+
+    tbody tr td {
+      transition: background-color 0.3s ease;
+    }
+  }
+}
+
+.id {
+  background: #50b053;
+  color: white;
+  text-align: center;
+  padding: 10px 4px;
+  border-radius: 3px;
+}
+
+.house, .apartment, .datetime {
+  width: 29%;
+  padding: 0 31px 0 0;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+
+  .lastname, .firstname, .patronymicname, .tel {
+    padding: 0 45px 0 0;
+    width: 20%;
+    margin-top: 2%;
+  }
+}
+
+textarea {
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 900px;
+  height: 280px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1%;
+
+  span {
+    margin: 0 15px;
+    color: #677485;
+    cursor: pointer;
+
+    &.active {
+      background: #50b053;
+      color: white !important;
+      padding: 9px 15px;
+      text-align: center;
+      border-radius: 20px;
+      font-weight: 200;
+      text-decoration: none !important;
+    }
+  }
+
+  button {
+    background: none;
+    color: #6c757d;
+    font-size: 18px;
+  }
+}
+
+.buttons-request {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 48%;
+    max-width: 100%;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+}
+
+.search {
+  width: 99%;
+  background: white;
+  padding: 60px 15px;
+  border-radius: 18px;
+}
+
+.pod_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    margin-top: -5%;
+  }
+}
+
+.error {
+  color: red;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url('@/assets/back.png');
+  background-position-y: center;
+
+  h1 {
+    background: #44a248;
+    width: 18%;
+    text-align: center;
+    padding: 22px 10px;
+    font-size: 18px;
+    color: white;
+    z-index: 999;
+    font-weight: 500;
+    border-radius: 10px;
+    margin-bottom: -2%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    background: white;
+    padding: 20px;
+    width: 19%;
+    height: 26%;
+    padding-bottom: 0;
+    padding-top: 3%;
+    border-radius: 8px;
+
+    input[type='text'], input[type='password'] {
+      border: none;
+      padding: 15px;
+      font-size: 15px;
+      width: 90%;
+      border-bottom: 1px solid grey;
+    }
+
+    button {
+      background-color: #44a248;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 17px;
+      font-size: 15px;
+      width: 30%;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+  }
+}
+
+.auth {
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  h2 {
+    text-align: center;
+  }
+
+  .error {
+    color: red;
+    text-align: center;
+  }
+}
